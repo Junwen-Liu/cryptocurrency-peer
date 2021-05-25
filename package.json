@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Junwen-Liu/cryptocurrency#readme",
   "devDependencies": {
     "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "hex-to-binary": "^1.0.1"
   }
 }
