@@ -30,7 +30,7 @@ app.get('/api/blocks', (req, res)=>{
     res.json(blockchain.chain);
 });
 
-pp.get('/api/blocks/length', (req, res) => {
+app.get('/api/blocks/length', (req, res) => {
     res.json(blockchain.chain.length);
 });
 
