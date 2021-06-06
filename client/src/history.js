@@ -1,4 +1,4 @@
-import { createBrowserHistory } from "history";
+import {createBrowserHistory} from 'history';
 
 //any file import, will share one instance
-export default createBrowserHistory();
+export default  createBrowserHistory();
