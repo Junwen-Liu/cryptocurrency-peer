@@ -12,7 +12,7 @@ const TransactionMiner = require('./app/transaction-miner');
 const isDevelopment = process.env.ENV === 'development';
 const REDIS_URL = isDevelopment ?  'redis://127.0.0.1:6379' : 'redis://:p47964925f5f0e3a706ee984a9556d27c507a075068599b3fc20f0695994af7ed@ec2-54-147-160-19.compute-1.amazonaws.com:19409';
 const DEFAULT_PORT = 3000;
-const ROOT_NODE_ADDRESS = `http://localhost:${DEFAULT_PORT}`;
+const ROOT_NODE_ADDRESS = isDevelopment ? `http://localhost:${DEFAULT_PORT}` : 'https://peaceful-coast-73573.herokuapp.com';
 
 
 const app = express();
