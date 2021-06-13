@@ -55,6 +55,40 @@ class Wallet{
 
         return hasConductedTransaction ? outputTotal : STARTING_BALANCE + outputTotal;
     }
+
+    static calculateBalanceByTime({chain, address, timestamp}){
+        let hasConductedTransaction = false;
+        let outputTotal = 0;
+
+        for(let i=chain.length -1; i>0; i--){
+            const block = chain[i];
+
+            for (let transaction of block.data){
+                
+                if(transaction.input.timestamp >= timestamp) {
+                    continue
+                }
+
+
+                if(transaction.input.address === address){
+                    hasConductedTransaction = true;
+                }
+
+                const addressOutput = transaction.outputMap[address];
+
+                if(addressOutput){
+                outputTotal = outputTotal + addressOutput;
+                }
+                
+            }
+
+            if(hasConductedTransaction){
+                break;
+            }
+        }
+
+        return hasConductedTransaction ? outputTotal : STARTING_BALANCE + outputTotal;
+    }
 }
 
 module.exports = Wallet;

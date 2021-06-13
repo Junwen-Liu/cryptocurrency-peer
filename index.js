@@ -139,7 +139,7 @@ const syncWithRootState = () => {
     })
 }
 
-if(isDevelopment){
+if(isDevelopment && process.env.GENERATE_PEER_PORT === 'false1'){
     const walletFoo = new Wallet();
 const walletBar = new Wallet();
 
