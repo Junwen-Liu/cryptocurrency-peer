@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import logo1 from '../assets/logo1.jpg';
+import logo1 from '../assets/logo_1.jpg';
 
 class App extends Component{
     state = {walletInfo:{}};
