@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../assets/logo1.jpg';
+import logo1 from '../assets/logo1.jpg';
 
 class App extends Component{
     state = {walletInfo:{}};
@@ -14,7 +14,7 @@ class App extends Component{
 
         return (
             <div className='App'>
-                <img className='logo' src={logo}></img>
+                <img className='logo' src={logo1}></img>
                 <br/>
                 <div>Welcome to the block chain!!!</div>
                 <br/>
